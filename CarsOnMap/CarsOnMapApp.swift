@@ -13,7 +13,7 @@ struct CarsOnMapApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MapView()
+            MainView()
         }
     }
 }

@@ -22,6 +22,10 @@
 		DAD0AAE62752C03B00EA872E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAE52752C03B00EA872E /* MapView.swift */; };
 		DAD0AAE82752CB2D00EA872E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD0AAE72752CB2D00EA872E /* Assets.xcassets */; };
 		DAD0AAEA2752CD0B00EA872E /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAE92752CD0B00EA872E /* PinView.swift */; };
+		DAD0AAEC2752DF3100EA872E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAEB2752DF3100EA872E /* MainView.swift */; };
+		DAD0AAF02752DFBF00EA872E /* CarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAEF2752DFBF00EA872E /* CarListView.swift */; };
+		DAD0AAF22752DFF000EA872E /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAF12752DFF000EA872E /* CarListViewModel.swift */; };
+		DAD0AAF42752E19500EA872E /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAF32752E19500EA872E /* CarDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		DAD0AAE52752C03B00EA872E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DAD0AAE72752CB2D00EA872E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAD0AAE92752CD0B00EA872E /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
+		DAD0AAEB2752DF3100EA872E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DAD0AAEF2752DFBF00EA872E /* CarListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListView.swift; sourceTree = "<group>"; };
+		DAD0AAF12752DFF000EA872E /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
+		DAD0AAF32752E19500EA872E /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
 		DD929640818DBCF3394AFD55 /* Pods-CarsOnMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsOnMapTests.debug.xcconfig"; path = "Target Support Files/Pods-CarsOnMapTests/Pods-CarsOnMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,8 +200,9 @@
 		DAD0AAD5275282F700EA872E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DAD0AAE52752C03B00EA872E /* MapView.swift */,
-				DAD0AAE92752CD0B00EA872E /* PinView.swift */,
+				DAD0AAEE2752DFA400EA872E /* CarListView */,
+				DAD0AAED2752DF8800EA872E /* MapView */,
+				DAD0AAEB2752DF3100EA872E /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD0AADB2752858200EA872E /* MapViewModel.swift */,
+				DAD0AAF12752DFF000EA872E /* CarListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -212,6 +222,24 @@
 				DAD0AADE2752892D00EA872E /* Car.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DAD0AAED2752DF8800EA872E /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0AAE52752C03B00EA872E /* MapView.swift */,
+				DAD0AAE92752CD0B00EA872E /* PinView.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		DAD0AAEE2752DFA400EA872E /* CarListView */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0AAEF2752DFBF00EA872E /* CarListView.swift */,
+				DAD0AAF32752E19500EA872E /* CarDetailView.swift */,
+			);
+			path = CarListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,13 +480,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD0AAF22752DFF000EA872E /* CarListViewModel.swift in Sources */,
 				DAD0AAE62752C03B00EA872E /* MapView.swift in Sources */,
+				DAD0AAEC2752DF3100EA872E /* MainView.swift in Sources */,
 				DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */,
 				DAD0AAEA2752CD0B00EA872E /* PinView.swift in Sources */,
 				DAD0AAD0275270BB00EA872E /* CodingTaskAPITarget.swift in Sources */,
 				DAD0AAD42752759000EA872E /* AppDelegate.swift in Sources */,
+				DAD0AAF42752E19500EA872E /* CarDetailView.swift in Sources */,
 				DAD0AADF2752892D00EA872E /* Car.swift in Sources */,
 				DAD0AADC2752858200EA872E /* MapViewModel.swift in Sources */,
+				DAD0AAF02752DFBF00EA872E /* CarListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

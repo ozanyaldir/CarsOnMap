@@ -13,21 +13,26 @@ import ObjectMapper
 class MapViewModel: ObservableObject {
     
     @Published var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 48.137154, longitude: 11.576124),
+        center: CLLocationCoordinate2D(latitude: 0, longitude: 0),
         span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)
     )
-    
     @Published var annotations: [AnnotationViewModel] = []
     
     func getCarList(){
         let provider = MoyaProvider<CodingTaskAPITarget>()
-        provider.request(.listCars) { result in
+        provider.request(.listCars) { [unowned self] result in
             switch result {
             case let .success(response):
                 do {
                     let carsJSON = try response.mapJSON()
                     guard let cars = Mapper<Car>().mapArray(JSONObject: carsJSON) else{ return }
-                    self.annotations = cars.map({AnnotationViewModel.init(car: $0)})
+                    let annotationVMArray = cars.map({AnnotationViewModel.init(car: $0)})
+                    self.annotations = annotationVMArray
+                    
+                    self.region = MKCoordinateRegion(
+                        center: self.getAnnotationArrayMidpoint(annotations: annotationVMArray),
+                        span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)
+                    )
                 }
                 catch{
                     print("err")
@@ -39,6 +44,17 @@ class MapViewModel: ObservableObject {
             
         }
         
+    }
+    
+}
+extension MapViewModel{
+    
+    func getAnnotationArrayMidpoint(annotations: [AnnotationViewModel]) -> CLLocationCoordinate2D{
+        let latitudeSumArray = annotations.reduce(0, {$0 + $1.coordinate.latitude})
+        let latitudeMidpoint = latitudeSumArray / Double(annotations.count)
+        let longitudeSumArray = annotations.reduce(0, {$0 + $1.coordinate.longitude})
+        let longitudeMidpoint = longitudeSumArray / Double(annotations.count)
+        return CLLocationCoordinate2D.init(latitude: latitudeMidpoint, longitude: longitudeMidpoint)
     }
     
 }
