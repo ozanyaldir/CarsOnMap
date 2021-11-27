@@ -6,6 +6,7 @@ target 'CarsOnMap' do
   use_frameworks!
   
   pod 'Moya', '~> 15.0'
+  pod 'ObjectMapper', '~> 4.2'
   
   #Debug tools
   pod 'netfox'
