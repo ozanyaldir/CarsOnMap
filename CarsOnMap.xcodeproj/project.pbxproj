@@ -138,9 +138,9 @@
 		DAD0AA97275266E300EA872E /* CarsOnMap */ = {
 			isa = PBXGroup;
 			children = (
+				DAD0AAD5275282F700EA872E /* Views */,
 				DAD0AACD27526F1700EA872E /* Services */,
 				DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */,
-				DAD0AA9A275266E300EA872E /* ContentView.swift */,
 				DAD0AA9C275266EA00EA872E /* Assets.xcassets */,
 				DAD0AA9E275266EA00EA872E /* Preview Content */,
 				DAD0AAD32752759000EA872E /* AppDelegate.swift */,
@@ -179,6 +179,14 @@
 				DAD0AACF275270BB00EA872E /* CodingTaskAPITarget.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DAD0AAD5275282F700EA872E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0AA9A275266E300EA872E /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
