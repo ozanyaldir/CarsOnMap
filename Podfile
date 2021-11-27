@@ -7,9 +7,10 @@ target 'CarsOnMap' do
   
   pod 'Moya', '~> 15.0'
   pod 'ObjectMapper', '~> 4.2'
+  pod 'Kingfisher', '~> 7.1'
   
   #Debug tools
-  pod 'netfox'
+  pod 'netfox', '~> 1.19'
 
   target 'CarsOnMapTests' do
     inherit! :search_paths
