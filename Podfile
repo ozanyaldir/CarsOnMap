@@ -4,9 +4,11 @@ platform :ios, '15.0'
 target 'CarsOnMap' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for CarsOnMap
+  
   pod 'Moya', '~> 15.0'
+  
+  #Debug tools
+  pod 'netfox'
 
   target 'CarsOnMapTests' do
     inherit! :search_paths
