@@ -17,6 +17,9 @@
 		DAD0AAAA275266EB00EA872E /* CarsOnMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAA9275266EB00EA872E /* CarsOnMapTests.swift */; };
 		DAD0AAB4275266EB00EA872E /* CarsOnMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAB3275266EB00EA872E /* CarsOnMapUITests.swift */; };
 		DAD0AAB6275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAB5275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift */; };
+		DAD0AAD0275270BB00EA872E /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AACF275270BB00EA872E /* APITarget.swift */; };
+		DAD0AAD22752736400EA872E /* APINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAD12752736400EA872E /* APINetwork.swift */; };
+		DAD0AAD42752759000EA872E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAD32752759000EA872E /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		DAD0AAAF275266EB00EA872E /* CarsOnMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarsOnMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD0AAB3275266EB00EA872E /* CarsOnMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsOnMapUITests.swift; sourceTree = "<group>"; };
 		DAD0AAB5275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsOnMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAD0AACF275270BB00EA872E /* APITarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
+		DAD0AAD12752736400EA872E /* APINetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APINetwork.swift; sourceTree = "<group>"; };
+		DAD0AAD32752759000EA872E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD929640818DBCF3394AFD55 /* Pods-CarsOnMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsOnMapTests.debug.xcconfig"; path = "Target Support Files/Pods-CarsOnMapTests/Pods-CarsOnMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +145,7 @@
 				DAD0AA9A275266E300EA872E /* ContentView.swift */,
 				DAD0AA9C275266EA00EA872E /* Assets.xcassets */,
 				DAD0AA9E275266EA00EA872E /* Preview Content */,
+				DAD0AAD32752759000EA872E /* AppDelegate.swift */,
 			);
 			path = CarsOnMap;
 			sourceTree = "<group>";
@@ -179,6 +186,8 @@
 		DAD0AACE27526F4A00EA872E /* CodingTask */ = {
 			isa = PBXGroup;
 			children = (
+				DAD0AACF275270BB00EA872E /* APITarget.swift */,
+				DAD0AAD12752736400EA872E /* APINetwork.swift */,
 			);
 			path = CodingTask;
 			sourceTree = "<group>";
@@ -423,6 +432,9 @@
 			files = (
 				DAD0AA9B275266E300EA872E /* ContentView.swift in Sources */,
 				DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */,
+				DAD0AAD0275270BB00EA872E /* APITarget.swift in Sources */,
+				DAD0AAD42752759000EA872E /* AppDelegate.swift in Sources */,
+				DAD0AAD22752736400EA872E /* APINetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4092F21DF3CDBB4E84C25F93 /* Pods-CarsOnMap.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -609,6 +622,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E4CABB7EE94444784AC0770 /* Pods-CarsOnMap.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -639,7 +653,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD929640818DBCF3394AFD55 /* Pods-CarsOnMapTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -665,7 +679,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44D949FB7A111B7C75629073 /* Pods-CarsOnMapTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -691,7 +705,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 275BBFEAA435FF9F01DF4E26 /* Pods-CarsOnMap-CarsOnMapUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VSQTNZ7WAN;
@@ -715,7 +729,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5460A0C00535C3ABAC1E9B5F /* Pods-CarsOnMap-CarsOnMapUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VSQTNZ7WAN;
