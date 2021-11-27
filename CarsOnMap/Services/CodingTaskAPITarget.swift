@@ -35,13 +35,15 @@ extension CodingTaskAPITarget: TargetType, AccessTokenAuthorizable {
     
     var method: Moya.Method {
         switch self {
-        case .listCars: return .get
+        case .listCars:
+            return .get
         }
     }
     
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .listCars: return URLEncoding.default
+        case .listCars:
+            return URLEncoding.default
         }
     }
     

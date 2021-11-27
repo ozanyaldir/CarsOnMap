@@ -11,14 +11,17 @@
 		AF9450136B38894708078834 /* Pods_CarsOnMap_CarsOnMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340109A51C746EB851738EC /* Pods_CarsOnMap_CarsOnMapUITests.framework */; };
 		C2579799CFCC38A542026BCE /* Pods_CarsOnMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0DEE8A8B74D43F8F54BBC6 /* Pods_CarsOnMapTests.framework */; };
 		DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */; };
-		DAD0AA9B275266E300EA872E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AA9A275266E300EA872E /* ContentView.swift */; };
-		DAD0AA9D275266EA00EA872E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD0AA9C275266EA00EA872E /* Assets.xcassets */; };
 		DAD0AAA0275266EA00EA872E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD0AA9F275266EA00EA872E /* Preview Assets.xcassets */; };
 		DAD0AAAA275266EB00EA872E /* CarsOnMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAA9275266EB00EA872E /* CarsOnMapTests.swift */; };
 		DAD0AAB4275266EB00EA872E /* CarsOnMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAB3275266EB00EA872E /* CarsOnMapUITests.swift */; };
 		DAD0AAB6275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAB5275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift */; };
 		DAD0AAD0275270BB00EA872E /* CodingTaskAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AACF275270BB00EA872E /* CodingTaskAPITarget.swift */; };
 		DAD0AAD42752759000EA872E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAD32752759000EA872E /* AppDelegate.swift */; };
+		DAD0AADC2752858200EA872E /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AADB2752858200EA872E /* MapViewModel.swift */; };
+		DAD0AADF2752892D00EA872E /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AADE2752892D00EA872E /* Car.swift */; };
+		DAD0AAE62752C03B00EA872E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAE52752C03B00EA872E /* MapView.swift */; };
+		DAD0AAE82752CB2D00EA872E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD0AAE72752CB2D00EA872E /* Assets.xcassets */; };
+		DAD0AAEA2752CD0B00EA872E /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAE92752CD0B00EA872E /* PinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +52,6 @@
 		9E4CABB7EE94444784AC0770 /* Pods-CarsOnMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsOnMap.release.xcconfig"; path = "Target Support Files/Pods-CarsOnMap/Pods-CarsOnMap.release.xcconfig"; sourceTree = "<group>"; };
 		DAD0AA95275266E300EA872E /* CarsOnMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsOnMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsOnMapApp.swift; sourceTree = "<group>"; };
-		DAD0AA9A275266E300EA872E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		DAD0AA9C275266EA00EA872E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAD0AA9F275266EA00EA872E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DAD0AAA5275266EB00EA872E /* CarsOnMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarsOnMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD0AAA9275266EB00EA872E /* CarsOnMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsOnMapTests.swift; sourceTree = "<group>"; };
@@ -59,6 +60,11 @@
 		DAD0AAB5275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsOnMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DAD0AACF275270BB00EA872E /* CodingTaskAPITarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodingTaskAPITarget.swift; sourceTree = "<group>"; };
 		DAD0AAD32752759000EA872E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAD0AADB2752858200EA872E /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		DAD0AADE2752892D00EA872E /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		DAD0AAE52752C03B00EA872E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		DAD0AAE72752CB2D00EA872E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAD0AAE92752CD0B00EA872E /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		DD929640818DBCF3394AFD55 /* Pods-CarsOnMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsOnMapTests.debug.xcconfig"; path = "Target Support Files/Pods-CarsOnMapTests/Pods-CarsOnMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,12 +144,14 @@
 		DAD0AA97275266E300EA872E /* CarsOnMap */ = {
 			isa = PBXGroup;
 			children = (
+				DAD0AADD2752891800EA872E /* Models */,
+				DAD0AAD62752836600EA872E /* ViewModels */,
 				DAD0AAD5275282F700EA872E /* Views */,
 				DAD0AACD27526F1700EA872E /* Services */,
-				DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */,
-				DAD0AA9C275266EA00EA872E /* Assets.xcassets */,
 				DAD0AA9E275266EA00EA872E /* Preview Content */,
+				DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */,
 				DAD0AAD32752759000EA872E /* AppDelegate.swift */,
+				DAD0AAE72752CB2D00EA872E /* Assets.xcassets */,
 			);
 			path = CarsOnMap;
 			sourceTree = "<group>";
@@ -184,9 +192,26 @@
 		DAD0AAD5275282F700EA872E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DAD0AA9A275266E300EA872E /* ContentView.swift */,
+				DAD0AAE52752C03B00EA872E /* MapView.swift */,
+				DAD0AAE92752CD0B00EA872E /* PinView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DAD0AAD62752836600EA872E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0AADB2752858200EA872E /* MapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DAD0AADD2752891800EA872E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0AADE2752892D00EA872E /* Car.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +323,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD0AAE82752CB2D00EA872E /* Assets.xcassets in Resources */,
 				DAD0AAA0275266EA00EA872E /* Preview Assets.xcassets in Resources */,
-				DAD0AA9D275266EA00EA872E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,10 +452,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAD0AA9B275266E300EA872E /* ContentView.swift in Sources */,
+				DAD0AAE62752C03B00EA872E /* MapView.swift in Sources */,
 				DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */,
+				DAD0AAEA2752CD0B00EA872E /* PinView.swift in Sources */,
 				DAD0AAD0275270BB00EA872E /* CodingTaskAPITarget.swift in Sources */,
 				DAD0AAD42752759000EA872E /* AppDelegate.swift in Sources */,
+				DAD0AADF2752892D00EA872E /* Car.swift in Sources */,
+				DAD0AADC2752858200EA872E /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
