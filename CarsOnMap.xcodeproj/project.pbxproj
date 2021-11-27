@@ -17,8 +17,7 @@
 		DAD0AAAA275266EB00EA872E /* CarsOnMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAA9275266EB00EA872E /* CarsOnMapTests.swift */; };
 		DAD0AAB4275266EB00EA872E /* CarsOnMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAB3275266EB00EA872E /* CarsOnMapUITests.swift */; };
 		DAD0AAB6275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAB5275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift */; };
-		DAD0AAD0275270BB00EA872E /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AACF275270BB00EA872E /* APITarget.swift */; };
-		DAD0AAD22752736400EA872E /* APINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAD12752736400EA872E /* APINetwork.swift */; };
+		DAD0AAD0275270BB00EA872E /* CodingTaskAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AACF275270BB00EA872E /* CodingTaskAPITarget.swift */; };
 		DAD0AAD42752759000EA872E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAD32752759000EA872E /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +57,7 @@
 		DAD0AAAF275266EB00EA872E /* CarsOnMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarsOnMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD0AAB3275266EB00EA872E /* CarsOnMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsOnMapUITests.swift; sourceTree = "<group>"; };
 		DAD0AAB5275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsOnMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		DAD0AACF275270BB00EA872E /* APITarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
-		DAD0AAD12752736400EA872E /* APINetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APINetwork.swift; sourceTree = "<group>"; };
+		DAD0AACF275270BB00EA872E /* CodingTaskAPITarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodingTaskAPITarget.swift; sourceTree = "<group>"; };
 		DAD0AAD32752759000EA872E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD929640818DBCF3394AFD55 /* Pods-CarsOnMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsOnMapTests.debug.xcconfig"; path = "Target Support Files/Pods-CarsOnMapTests/Pods-CarsOnMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,18 +176,9 @@
 		DAD0AACD27526F1700EA872E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DAD0AACE27526F4A00EA872E /* CodingTask */,
+				DAD0AACF275270BB00EA872E /* CodingTaskAPITarget.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		DAD0AACE27526F4A00EA872E /* CodingTask */ = {
-			isa = PBXGroup;
-			children = (
-				DAD0AACF275270BB00EA872E /* APITarget.swift */,
-				DAD0AAD12752736400EA872E /* APINetwork.swift */,
-			);
-			path = CodingTask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,9 +421,8 @@
 			files = (
 				DAD0AA9B275266E300EA872E /* ContentView.swift in Sources */,
 				DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */,
-				DAD0AAD0275270BB00EA872E /* APITarget.swift in Sources */,
+				DAD0AAD0275270BB00EA872E /* CodingTaskAPITarget.swift in Sources */,
 				DAD0AAD42752759000EA872E /* AppDelegate.swift in Sources */,
-				DAD0AAD22752736400EA872E /* APINetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
