@@ -12,7 +12,7 @@ enum CodingTaskAPITarget {
     case listCars
 }
 
-extension CodingTaskAPITarget: TargetType, AccessTokenAuthorizable {
+extension CodingTaskAPITarget: TargetType {
     
     var parameters: [String : Any]? {
         [:]
@@ -51,16 +51,5 @@ extension CodingTaskAPITarget: TargetType, AccessTokenAuthorizable {
         .requestParameters(parameters: parameters ?? [:], encoding: parameterEncoding)
     }
     
-    var shouldAuthorize: Bool {
-        false
-    }
-    
-    var authorizationType: AuthorizationType? {
-        .bearer
-    }
-    
-    var sampleData: Data {
-        Data()
-    }
 }
 

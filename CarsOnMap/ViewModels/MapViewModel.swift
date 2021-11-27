@@ -17,7 +17,7 @@ class MapViewModel: ObservableObject {
         span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)
     )
     
-    @Published var locations: [LocationViewModel] = []
+    @Published var annotations: [AnnotationViewModel] = []
     
     func getCarList(){
         let provider = MoyaProvider<CodingTaskAPITarget>()
@@ -27,7 +27,7 @@ class MapViewModel: ObservableObject {
                 do {
                     let carsJSON = try response.mapJSON()
                     guard let cars = Mapper<Car>().mapArray(JSONObject: carsJSON) else{ return }
-                    self.locations = cars.map({LocationViewModel.init(car: $0)})
+                    self.annotations = cars.map({AnnotationViewModel.init(car: $0)})
                 }
                 catch{
                     print("err")
@@ -43,9 +43,10 @@ class MapViewModel: ObservableObject {
     
 }
 
-struct LocationViewModel: Identifiable{
+struct AnnotationViewModel: Identifiable{
     
     let id: String
+    let name: String?
     let modelName: String
     let carImageUrl: String?
     let coordinate: CLLocationCoordinate2D
@@ -53,6 +54,7 @@ struct LocationViewModel: Identifiable{
     init(car: Car){
         self.id = car.id ?? UUID().uuidString
         self.modelName = car.modelName ?? "Undefined"
+        self.name = car.name ?? "Undefined"
         self.carImageUrl = car.carImageUrl
         self.coordinate = CLLocationCoordinate2D(latitude: car.latitude!, longitude: car.longitude!)
     }

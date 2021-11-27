@@ -12,9 +12,9 @@ struct MapView: View {
     @StateObject private var mapVM = MapViewModel()
     
     var body: some View {
-        Map(coordinateRegion: $mapVM.region, annotationItems: mapVM.locations) { (location) -> MapAnnotation<PinView> in
-            MapAnnotation(coordinate: location.coordinate) {
-                PinView(title: location.modelName, imageURL: location.carImageUrl!)
+        Map(coordinateRegion: $mapVM.region, annotationItems: mapVM.annotations) { (annotationVM) -> MapAnnotation<PinView> in
+            MapAnnotation(coordinate: annotationVM.coordinate) {
+                PinView(title: annotationVM.modelName, imageURL: annotationVM.carImageUrl!)
             }
         }
         .onAppear {
