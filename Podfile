@@ -6,6 +6,7 @@ target 'CarsOnMap' do
   use_frameworks!
 
   # Pods for CarsOnMap
+  pod 'Moya', '~> 15.0'
 
   target 'CarsOnMapTests' do
     inherit! :search_paths
@@ -17,4 +18,3 @@ target 'CarsOnMap' do
   end
 
 end
-

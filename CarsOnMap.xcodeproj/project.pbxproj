@@ -106,7 +106,6 @@
 				DD929640818DBCF3394AFD55 /* Pods-CarsOnMapTests.debug.xcconfig */,
 				44D949FB7A111B7C75629073 /* Pods-CarsOnMapTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -135,6 +134,7 @@
 		DAD0AA97275266E300EA872E /* CarsOnMap */ = {
 			isa = PBXGroup;
 			children = (
+				DAD0AACD27526F1700EA872E /* Services */,
 				DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */,
 				DAD0AA9A275266E300EA872E /* ContentView.swift */,
 				DAD0AA9C275266EA00EA872E /* Assets.xcassets */,
@@ -168,6 +168,21 @@
 			path = CarsOnMapUITests;
 			sourceTree = "<group>";
 		};
+		DAD0AACD27526F1700EA872E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0AACE27526F4A00EA872E /* CodingTask */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DAD0AACE27526F4A00EA872E /* CodingTask */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CodingTask;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,6 +194,7 @@
 				DAD0AA91275266E200EA872E /* Sources */,
 				DAD0AA92275266E200EA872E /* Frameworks */,
 				DAD0AA93275266E200EA872E /* Resources */,
+				D35DC6FF33378AF06780B3CF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +232,7 @@
 				DAD0AAAB275266EB00EA872E /* Sources */,
 				DAD0AAAC275266EB00EA872E /* Frameworks */,
 				DAD0AAAD275266EB00EA872E /* Resources */,
+				586128A1C076273BAA175493 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,6 +334,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		586128A1C076273BAA175493 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarsOnMap-CarsOnMapUITests/Pods-CarsOnMap-CarsOnMapUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarsOnMap-CarsOnMapUITests/Pods-CarsOnMap-CarsOnMapUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarsOnMap-CarsOnMapUITests/Pods-CarsOnMap-CarsOnMapUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D35DC6FF33378AF06780B3CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarsOnMap/Pods-CarsOnMap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarsOnMap/Pods-CarsOnMap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarsOnMap/Pods-CarsOnMap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DC3252DF68EBCDF5332C62B6 /* [CP] Check Pods Manifest.lock */ = {
