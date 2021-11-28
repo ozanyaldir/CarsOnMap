@@ -6,9 +6,7 @@
 //
 
 import Foundation
-import Moya
 import MapKit
-import ObjectMapper
 
 class CarListViewModel: ObservableObject {
     private let requestResource = CarsRequestResource.default

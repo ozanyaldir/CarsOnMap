@@ -6,9 +6,7 @@
 //
 
 import Foundation
-import Moya
 import MapKit
-import ObjectMapper
 
 class MapViewModel: ObservableObject {
     private let requestResource = CarsRequestResource.default
@@ -27,8 +25,9 @@ class MapViewModel: ObservableObject {
             case .success(let cars):
                 let annotationVMArray = cars.map({AnnotationViewModel.init(car: $0)})
                 self.annotations = annotationVMArray
+                let coordinatesArray = annotationVMArray.map({$0.coordinate})
                 self.region = MKCoordinateRegion(
-                    center: self.calculateAnnotationArrayMidpoint(annotations: annotationVMArray),
+                    center: coordinatesArray.calculateCoordinatesArrayMidpoint(),
                     span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)
                 )
                 isFailed = false
@@ -37,18 +36,6 @@ class MapViewModel: ObservableObject {
                 isFailed = true
             }
         }
-    }
-    
-}
-
-extension MapViewModel{
-    
-    func calculateAnnotationArrayMidpoint(annotations: [AnnotationViewModel]) -> CLLocationCoordinate2D{
-        let latitudeSumArray = annotations.reduce(0, {$0 + $1.coordinate.latitude})
-        let latitudeMidpoint = latitudeSumArray / Double(annotations.count)
-        let longitudeSumArray = annotations.reduce(0, {$0 + $1.coordinate.longitude})
-        let longitudeMidpoint = longitudeSumArray / Double(annotations.count)
-        return CLLocationCoordinate2D.init(latitude: latitudeMidpoint, longitude: longitudeMidpoint)
     }
     
 }

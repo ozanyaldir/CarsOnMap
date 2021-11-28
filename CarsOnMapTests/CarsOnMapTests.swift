@@ -6,29 +6,17 @@
 //
 
 import XCTest
+import MapKit
 @testable import CarsOnMap
 
-class CarsOnMapTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        XCTAssert(true)
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        //self.measure {
-            // Put the code you want to measure the time of here.
-        //}
+class when_loading_the_map_view: XCTestCase {
+    
+    func test_should_calculate_cars_midpoint_successfully() throws {
+        let coordinate1 = CLLocationCoordinate2D(latitude: 10, longitude: 20)
+        let coordinate2 = CLLocationCoordinate2D(latitude: 20, longitude: 40)
+        let midpoint = [coordinate1, coordinate2].calculateCoordinatesArrayMidpoint()
+        XCTAssertEqual(midpoint.latitude, 15)
+        XCTAssertEqual(midpoint.longitude, 30)
     }
 
 }
