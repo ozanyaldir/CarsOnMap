@@ -47,6 +47,6 @@
 
 
 ## Screenshots
-![alt text](./MAP.png?raw=true){:height="50%" width="50%"}
-![alt text](./CAR_LIST.png?raw=true){:height="50%" width="50%"}
-![alt text](./CAR_DETAIL.png?raw=true){:height="50%" width="50%"}
+![alt text](./MAP.png?raw=true)
+![alt text](./CAR_LIST.png?raw=true)
+![alt text](./CAR_DETAIL.png?raw=true)
