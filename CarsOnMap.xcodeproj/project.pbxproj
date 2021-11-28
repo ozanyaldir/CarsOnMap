@@ -10,6 +10,8 @@
 		796C9DD578F5B3FFFCFEBBBE /* Pods_CarsOnMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4427CC4A6FB65909F317B058 /* Pods_CarsOnMap.framework */; };
 		AF9450136B38894708078834 /* Pods_CarsOnMap_CarsOnMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340109A51C746EB851738EC /* Pods_CarsOnMap_CarsOnMapUITests.framework */; };
 		C2579799CFCC38A542026BCE /* Pods_CarsOnMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0DEE8A8B74D43F8F54BBC6 /* Pods_CarsOnMapTests.framework */; };
+		DA1B2B222753FC9600DC930B /* Array+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */; };
+		DA1B2B232753FD1C00DC930B /* Array+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */; };
 		DA25D61F2753CF8000FB41A5 /* RequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D61E2753CF8000FB41A5 /* RequestResource.swift */; };
 		DA25D6212753D1ED00FB41A5 /* CarsRequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D6202753D1ED00FB41A5 /* CarsRequestResource.swift */; };
 		DA25D6242753E1E200FB41A5 /* CachePolicyPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */; };
@@ -59,6 +61,7 @@
 		6B0DEE8A8B74D43F8F54BBC6 /* Pods_CarsOnMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsOnMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7340109A51C746EB851738EC /* Pods_CarsOnMap_CarsOnMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsOnMap_CarsOnMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4CABB7EE94444784AC0770 /* Pods-CarsOnMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsOnMap.release.xcconfig"; path = "Target Support Files/Pods-CarsOnMap/Pods-CarsOnMap.release.xcconfig"; sourceTree = "<group>"; };
+		DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
 		DA25D61E2753CF8000FB41A5 /* RequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResource.swift; sourceTree = "<group>"; };
 		DA25D6202753D1ED00FB41A5 /* CarsRequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsRequestResource.swift; sourceTree = "<group>"; };
 		DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePolicyPlugin.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */,
+				DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -526,6 +530,7 @@
 				DA25D6212753D1ED00FB41A5 /* CarsRequestResource.swift in Sources */,
 				DA25D6242753E1E200FB41A5 /* CachePolicyPlugin.swift in Sources */,
 				DAD0AAEA2752CD0B00EA872E /* PinView.swift in Sources */,
+				DA1B2B222753FC9600DC930B /* Array+CLLocationCoordinate2D.swift in Sources */,
 				DAC13F2A2753ABA000CAB941 /* CarDetailHeaderView.swift in Sources */,
 				DAD0AAD0275270BB00EA872E /* CodingTaskAPITarget.swift in Sources */,
 				DAC13F2C2753ABCE00CAB941 /* CarDetailBodyView.swift in Sources */,
@@ -543,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD0AAAA275266EB00EA872E /* CarsOnMapTests.swift in Sources */,
+				DA1B2B232753FD1C00DC930B /* Array+CLLocationCoordinate2D.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

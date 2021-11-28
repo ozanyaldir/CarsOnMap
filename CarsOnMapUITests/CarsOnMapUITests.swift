@@ -26,6 +26,12 @@ class CarsOnMapUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        XCUIApplication().tabBars["Tab Bar"].buttons["List"].tap()
+        
+        let tablesQuery = XCUIApplication().tables
+        tablesQuery.cells["Vanessa, (MINI)"].children(matching: .other).element(boundBy: 0).children(matching: .other).element.tap()
+        tablesQuery.cells["Color:, midnight_black"].children(matching: .other).element(boundBy: 0)/*@START_MENU_TOKEN@*/.swipeLeft()/*[[".swipeUp()",".swipeLeft()"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
