@@ -1,16 +1,15 @@
 # CarsOnMap
 
- CarsOnMap is an iOS application which shows the nearby cars in a region. It fetches the data from url ("https://cdn.sixt.io/codingtask/cars") and shows the results on a map or in a list.
+ CarsOnMap is an iOS application which shows the nearby cars in a region. It fetches the data from url ("https://cdn.sixt.io/codingtask/cars") and shows the results on a map or in a list. The details of a car (such as driver name, model, etc.) can be viewed into a detail page from the list page. There is no complex interactions with the app, only viewing the nearby cars feature is developed.
 
   
 ## Development
 
 ### Language
- - The project is developed with Swift language using SwiftUI for UI development. Swift is the language I've been developing from the first years of my career, I am mostly comfortable with Swift language. I like to use new technologies, I developed the UI using SwiftUI.
+ - The project is developed in Swift programming language. And the UI development is made using SwiftUI. There is no UIKit used in the project.
 
 ### Architecture
- - The project is developed with MVVM design pattern. I usually prefer MVVM while starting a new project, used to develop applications using MVC too.
-
+ - The project is developed with MVVM design pattern. 
 
 ### Dependencies
 
@@ -18,6 +17,11 @@
  - ObjectMapper(v4.2) library to map fetched data into objects. ObjectMapper is a lightweight simple framework and in such simple applications it can be a useful alternative.
  - Kingfisher(v7.1) library to load images asynchronously from a url. Kingfisher is a well known reliable library which enables the developer to define caching policies or store temporarily or persistently images.
  - netfox(v1.19) is a useful network debugging library. Instead of logging or strugglin to visualize the network flow, using netfox which visualizes all networking without any efford is very useful for the integration of API calls.
+
+## Setup Requirements
+
+### Git
+ There is no multiple branches for the project. `main` branch can be used to compile the app.
 
 ### To install dependencies
  Only CocoaPods is used to add dependencies into the project. Run `pod install` will install all the dependencies.

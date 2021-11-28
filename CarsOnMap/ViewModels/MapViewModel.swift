@@ -30,7 +30,7 @@ class MapViewModel: ObservableObject {
                     self.annotations = annotationVMArray
                     
                     self.region = MKCoordinateRegion(
-                        center: self.getAnnotationArrayMidpoint(annotations: annotationVMArray),
+                        center: self.calculateAnnotationArrayMidpoint(annotations: annotationVMArray),
                         span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)
                     )
                 }
@@ -47,9 +47,10 @@ class MapViewModel: ObservableObject {
     }
     
 }
+
 extension MapViewModel{
     
-    func getAnnotationArrayMidpoint(annotations: [AnnotationViewModel]) -> CLLocationCoordinate2D{
+    func calculateAnnotationArrayMidpoint(annotations: [AnnotationViewModel]) -> CLLocationCoordinate2D{
         let latitudeSumArray = annotations.reduce(0, {$0 + $1.coordinate.latitude})
         let latitudeMidpoint = latitudeSumArray / Double(annotations.count)
         let longitudeSumArray = annotations.reduce(0, {$0 + $1.coordinate.longitude})

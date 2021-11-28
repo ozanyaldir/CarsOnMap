@@ -10,6 +10,8 @@
 		796C9DD578F5B3FFFCFEBBBE /* Pods_CarsOnMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4427CC4A6FB65909F317B058 /* Pods_CarsOnMap.framework */; };
 		AF9450136B38894708078834 /* Pods_CarsOnMap_CarsOnMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340109A51C746EB851738EC /* Pods_CarsOnMap_CarsOnMapUITests.framework */; };
 		C2579799CFCC38A542026BCE /* Pods_CarsOnMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0DEE8A8B74D43F8F54BBC6 /* Pods_CarsOnMapTests.framework */; };
+		DAC13F2A2753ABA000CAB941 /* CarDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC13F292753AB9F00CAB941 /* CarDetailHeaderView.swift */; };
+		DAC13F2C2753ABCE00CAB941 /* CarDetailBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC13F2B2753ABCE00CAB941 /* CarDetailBodyView.swift */; };
 		DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */; };
 		DAD0AAA0275266EA00EA872E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD0AA9F275266EA00EA872E /* Preview Assets.xcassets */; };
 		DAD0AAAA275266EB00EA872E /* CarsOnMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAA9275266EB00EA872E /* CarsOnMapTests.swift */; };
@@ -54,6 +56,8 @@
 		6B0DEE8A8B74D43F8F54BBC6 /* Pods_CarsOnMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsOnMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7340109A51C746EB851738EC /* Pods_CarsOnMap_CarsOnMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsOnMap_CarsOnMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4CABB7EE94444784AC0770 /* Pods-CarsOnMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsOnMap.release.xcconfig"; path = "Target Support Files/Pods-CarsOnMap/Pods-CarsOnMap.release.xcconfig"; sourceTree = "<group>"; };
+		DAC13F292753AB9F00CAB941 /* CarDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailHeaderView.swift; sourceTree = "<group>"; };
+		DAC13F2B2753ABCE00CAB941 /* CarDetailBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailBodyView.swift; sourceTree = "<group>"; };
 		DAD0AA95275266E300EA872E /* CarsOnMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsOnMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsOnMapApp.swift; sourceTree = "<group>"; };
 		DAD0AA9F275266EA00EA872E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -125,6 +129,16 @@
 				44D949FB7A111B7C75629073 /* Pods-CarsOnMapTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DAC13F2D2753B11700CAB941 /* CarDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0AAF32752E19500EA872E /* CarDetailView.swift */,
+				DAC13F292753AB9F00CAB941 /* CarDetailHeaderView.swift */,
+				DAC13F2B2753ABCE00CAB941 /* CarDetailBodyView.swift */,
+			);
+			path = CarDetails;
 			sourceTree = "<group>";
 		};
 		DAD0AA8C275266E200EA872E = {
@@ -200,8 +214,8 @@
 		DAD0AAD5275282F700EA872E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DAD0AAEE2752DFA400EA872E /* CarListView */,
-				DAD0AAED2752DF8800EA872E /* MapView */,
+				DAD0AAEE2752DFA400EA872E /* CarList */,
+				DAD0AAED2752DF8800EA872E /* CarMap */,
 				DAD0AAEB2752DF3100EA872E /* MainView.swift */,
 			);
 			path = Views;
@@ -224,22 +238,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DAD0AAED2752DF8800EA872E /* MapView */ = {
+		DAD0AAED2752DF8800EA872E /* CarMap */ = {
 			isa = PBXGroup;
 			children = (
 				DAD0AAE52752C03B00EA872E /* MapView.swift */,
 				DAD0AAE92752CD0B00EA872E /* PinView.swift */,
 			);
-			path = MapView;
+			path = CarMap;
 			sourceTree = "<group>";
 		};
-		DAD0AAEE2752DFA400EA872E /* CarListView */ = {
+		DAD0AAEE2752DFA400EA872E /* CarList */ = {
 			isa = PBXGroup;
 			children = (
 				DAD0AAEF2752DFBF00EA872E /* CarListView.swift */,
-				DAD0AAF32752E19500EA872E /* CarDetailView.swift */,
+				DAC13F2D2753B11700CAB941 /* CarDetails */,
 			);
-			path = CarListView;
+			path = CarList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,7 +499,9 @@
 				DAD0AAEC2752DF3100EA872E /* MainView.swift in Sources */,
 				DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */,
 				DAD0AAEA2752CD0B00EA872E /* PinView.swift in Sources */,
+				DAC13F2A2753ABA000CAB941 /* CarDetailHeaderView.swift in Sources */,
 				DAD0AAD0275270BB00EA872E /* CodingTaskAPITarget.swift in Sources */,
+				DAC13F2C2753ABCE00CAB941 /* CarDetailBodyView.swift in Sources */,
 				DAD0AAD42752759000EA872E /* AppDelegate.swift in Sources */,
 				DAD0AAF42752E19500EA872E /* CarDetailView.swift in Sources */,
 				DAD0AADF2752892D00EA872E /* Car.swift in Sources */,

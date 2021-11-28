@@ -6,20 +6,23 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CarDetailView: View {
-    
     let car: CarListItemViewModel
-    
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         NavigationView {
-            VStack{
-                Text("\(car.name ?? "Undefined")").bold()
+            Form {
+                CarDetailHeaderView(car: car)
+                CarDetailBodyView(car: car)
             }
-            .navigationBarTitle(Text("Car Details"), displayMode: .inline)
+            .navigationBarTitle(Text("Car Details"))
         }
     }
 }
+
 
 struct CarDetailView_Previews: PreviewProvider{
     static var previews: some View{
