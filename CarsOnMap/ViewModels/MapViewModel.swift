@@ -7,9 +7,10 @@
 
 import Foundation
 import MapKit
+import Moya
 
 class MapViewModel: ObservableObject {
-    private let requestResource = CarsRequestResource.default
+    private let requestResource = CarsRequestResource.init(provider: MoyaProvider<CodingTaskAPITarget>(plugins: [CachePolicyPlugin()]))
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 0, longitude: 0),
         span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)
@@ -20,7 +21,7 @@ class MapViewModel: ObservableObject {
     
     func getCarList(){
         isFailed = false
-        self.requestResource.getCarsList { [unowned self] result in
+        requestResource.getCarsList { [unowned self] result in
             switch result{
             case .success(let cars):
                 let annotationVMArray = cars.map({AnnotationViewModel.init(car: $0)})

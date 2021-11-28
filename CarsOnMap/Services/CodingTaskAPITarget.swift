@@ -51,6 +51,13 @@ extension CodingTaskAPITarget: TargetType {
         .requestParameters(parameters: parameters ?? [:], encoding: parameterEncoding)
     }
     
+    var sampleData: Data{
+        switch self {
+        case .listCars:
+            return Data((Constants.mockResponse ?? "").utf8)
+        }
+    }
+    
 }
 
 extension CodingTaskAPITarget: CachePolicyGettable {
