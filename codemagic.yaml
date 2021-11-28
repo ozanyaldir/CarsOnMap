@@ -1,5 +1,13 @@
 workflows:
-  hello-world:
-    name: Hello world workflow
+  carsonmap-workflow:
+    name: CarsOnMap Pipeline
     scripts:
-        - echo "Hello World!"
+      - name: CICD Started
+        script: echo "CICD Started"
+      - name: Build CarsOnMap
+        script: xcodebuild build -workspace "CarsOnMap.xcworkspace" -scheme "CarsOnMap" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+    publishing:
+      email:
+        recipients:
+          - ozanyaldir@gmail.com
+        
