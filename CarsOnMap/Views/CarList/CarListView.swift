@@ -43,7 +43,11 @@ struct CarListView: View {
             .alert("Failed Fetching", isPresented: $carListVM.isFailed) {
                 Button("Reload") { self.carListVM.getCarList() }
             }
-            .navigationBarTitle("Cars", displayMode: .inline)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(content: {
+                 ToolbarItem(placement: .principal, content: {
+                 Text("Cars")
+              })})  
         }
     }
 }
