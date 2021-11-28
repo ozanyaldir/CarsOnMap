@@ -1,11 +1,23 @@
 workflows:
   carsonmap-workflow:
-    name: CarsOnMap Pipeline
+    name: Code Signing Workflow
+    environment:
+      groups:
+        - admin
     scripts:
-      - name: CICD Started
-        script: echo "CICD Started"
-      - name: Build CarsOnMap
-        script: xcodebuild build -workspace "CarsOnMap.xcworkspace" -scheme "CarsOnMap" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      - name: Set up keychain to be used for code signing using Codemagic CLI 'keychain' command
+        script: keychain initialize
+      - name: Fetch signing files
+        script: |
+          app-store-connect fetch-signing-files "com.ozanyaldir.CarsOnMap" \
+            --type IOS_APP_STORE \
+            --create      
+      - name: Set up signing certificate
+        script: keychain add-certificates
+      - name: Set up code signing settings on Xcode project
+        script: xcode-project use-profiles
+      - name: Build App
+        script: xcode-project build-ipa --workspace "CarsOnMap.xcworkspace" --scheme "CarsOnMap"
     publishing:
       email:
         recipients:
