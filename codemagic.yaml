@@ -5,6 +5,13 @@ workflows:
       groups:
         - admin
     scripts:
+      - name: iOS test
+        script: |
+          xcode-project run-tests \
+              --workspace MyAwesomeApp.xcworkspace \
+              --scheme MyAwesomeApp \
+              --device "iPhone 11"
+        test_report: build/ios/test/*.xml
       - name: Set up keychain to be used for code signing using Codemagic CLI 'keychain' command
         script: keychain initialize
       - name: Fetch signing files
