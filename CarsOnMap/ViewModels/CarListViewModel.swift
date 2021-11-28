@@ -7,16 +7,17 @@
 
 import Foundation
 import MapKit
+import Moya
 
 class CarListViewModel: ObservableObject {
-    private let requestResource = CarsRequestResource.default
+    private let requestResource = CarsRequestResource.init(provider: MoyaProvider<CodingTaskAPITarget>(plugins: [CachePolicyPlugin()]))
     @Published private(set) var cars: [CarListItemViewModel] = []
     @Published private(set) var apiCallError: APICallError?
     @Published var isFailed: Bool = false
     
     func getCarList(){
         isFailed = false
-        self.requestResource.getCarsList { [unowned self] result in
+        requestResource.getCarsList { [unowned self] result in
             switch result{
             case .success(let cars):
                 DispatchQueue.main.async {

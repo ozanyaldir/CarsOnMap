@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Moya
 
 class when_main_view_is_shown: XCTestCase {
 
@@ -14,6 +15,15 @@ class when_main_view_is_shown: XCTestCase {
         continueAfterFailure = false
         app.launch()
         
+        //let requestResource = CarsRequestResource.init(provider: MoyaProvider<CodingTaskAPITarget>(stubClosure: MoyaProvider.immediatelyStub))
+        //requestResource.getCarsList { [unowned self] result in
+        //    switch result{
+        //    case .success(let cars):
+        //        print(cars)
+        //    case .failure(let error):
+        //        print(error)
+        //    }
+        //}
         
     }
 }

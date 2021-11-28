@@ -11,8 +11,6 @@ import ObjectMapper
 
 class CarsRequestResource: RequestResource {
     
-    public static let `default` = CarsRequestResource()
-    
     open func getCarsList(_ completion: @escaping(Result<[Car], APICallError>) -> Void){
         makeBasicRequest(target: .listCars) { result in
             switch result{
