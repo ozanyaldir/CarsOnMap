@@ -18,6 +18,25 @@
  - Kingfisher(v7.1) library to load images asynchronously from a url. Kingfisher is a well known reliable library which enables the developer to define caching policies or store temporarily or persistently images.
  - netfox(v1.19) is a useful network debugging library. Instead of logging or strugglin to visualize the network flow, using netfox which visualizes all networking without any efford is very useful for the integration of API calls.
 
+## Tests
+
+### Unit Tests
+ - Some basic functionality tests yet.
+
+### UI Tests
+ - There is no UI Tests added yet.
+
+## CI/CD
+
+### Tool
+ - Codemagic is used for test automation and deployment. (see `codemagic.yaml` file).
+
+### Workflows
+
+  - Testing Workflow; to run tests
+  - Code signing workflow: to build and deploy application to appstoreconnect.
+
+
 ## Setup Requirements
 
 ### Git
