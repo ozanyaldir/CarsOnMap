@@ -44,3 +44,9 @@
 
 ### To install dependencies
  Only CocoaPods is used to add dependencies into the project. Run `pod install` will install all the dependencies.
+
+
+## Screenshots
+![alt text](./MAP.png?raw=true)
+![alt text](./CAR_LIST.png?raw=true)
+![alt text](./CAR_DETAIL.png?raw=true)
