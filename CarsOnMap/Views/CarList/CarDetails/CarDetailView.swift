@@ -18,8 +18,9 @@ struct CarDetailView: View {
                 CarDetailHeaderView(car: car)
                 CarDetailBodyView(car: car)
             }
-            .navigationBarTitle(Text("Car Details"))
+            .navigationBarTitle("Car Details")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

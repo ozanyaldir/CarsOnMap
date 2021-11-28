@@ -24,16 +24,20 @@ class MapViewModel: ObservableObject {
             switch result{
             case .success(let cars):
                 let annotationVMArray = cars.map({AnnotationViewModel.init(car: $0)})
-                self.annotations = annotationVMArray
                 let coordinatesArray = annotationVMArray.map({$0.coordinate})
-                self.region = MKCoordinateRegion(
-                    center: coordinatesArray.calculateCoordinatesArrayMidpoint(),
-                    span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)
-                )
-                isFailed = false
+                DispatchQueue.main.async {
+                    self.annotations = annotationVMArray
+                    self.region = MKCoordinateRegion(
+                        center: coordinatesArray.calculateCoordinatesArrayMidpoint(),
+                        span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)
+                    )
+                    isFailed = false
+                }
             case .failure(let error):
-                self.apiCallError = error
-                isFailed = true
+                DispatchQueue.main.async {
+                    self.apiCallError = error
+                    isFailed = true
+                }
             }
         }
     }

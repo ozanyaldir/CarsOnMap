@@ -19,11 +19,15 @@ class CarListViewModel: ObservableObject {
         self.requestResource.getCarsList { [unowned self] result in
             switch result{
             case .success(let cars):
-                self.cars = cars.map({CarListItemViewModel.init(car: $0)})
-                isFailed = false
+                DispatchQueue.main.async {
+                    self.cars = cars.map({CarListItemViewModel.init(car: $0)})
+                    isFailed = false
+                }
             case .failure(let error):
-                self.apiCallError = error
-                isFailed = true
+                DispatchQueue.main.async {
+                    self.apiCallError = error
+                    isFailed = true
+                }
             }
         }
     }
