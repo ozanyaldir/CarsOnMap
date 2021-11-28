@@ -53,3 +53,13 @@ extension CodingTaskAPITarget: TargetType {
     
 }
 
+extension CodingTaskAPITarget: CachePolicyGettable {
+    var cachePolicy: URLRequest.CachePolicy {
+        switch self {
+        case .listCars:
+            return .useProtocolCachePolicy
+        //default:
+        //    return .reloadIgnoringLocalCacheData
+        }
+    }
+}

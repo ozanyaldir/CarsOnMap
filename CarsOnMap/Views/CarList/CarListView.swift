@@ -40,6 +40,9 @@ struct CarListView: View {
             .onAppear {
                 carListVM.getCarList()
             }
+            .alert("Failed Fetching", isPresented: $carListVM.isFailed) {
+                Button("Reload") { self.carListVM.getCarList() }
+            }
             .navigationBarTitle("Cars", displayMode: .inline)
         }
     }

@@ -1,5 +1,19 @@
 workflows:
-  carsonmap-workflow:
+  testing-workflow:
+    name: Testing Workflow
+    scripts:
+      - name: iOS test
+        script: |
+          xcode-project run-tests \
+              --workspace CarsOnMap.xcworkspace \
+              --scheme CarsOnMap \
+              --device "iPhone 11"
+        test_report: build/ios/test/*.xml
+    publishing:
+      email:
+        recipients:
+          - ozanyaldir@gmail.com
+  codesigning-workflow:
     name: Code Signing Workflow
     environment:
       groups:

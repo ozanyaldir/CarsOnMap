@@ -20,6 +20,9 @@ struct MapView: View {
         .onAppear {
             mapVM.getCarList()
         }
+        .alert("Failed Fetching", isPresented: $mapVM.isFailed) {
+            Button("Reload") { self.mapVM.getCarList() }
+        }
     }
 }
 

@@ -10,6 +10,9 @@
 		796C9DD578F5B3FFFCFEBBBE /* Pods_CarsOnMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4427CC4A6FB65909F317B058 /* Pods_CarsOnMap.framework */; };
 		AF9450136B38894708078834 /* Pods_CarsOnMap_CarsOnMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340109A51C746EB851738EC /* Pods_CarsOnMap_CarsOnMapUITests.framework */; };
 		C2579799CFCC38A542026BCE /* Pods_CarsOnMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0DEE8A8B74D43F8F54BBC6 /* Pods_CarsOnMapTests.framework */; };
+		DA25D61F2753CF8000FB41A5 /* RequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D61E2753CF8000FB41A5 /* RequestResource.swift */; };
+		DA25D6212753D1ED00FB41A5 /* CarsRequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D6202753D1ED00FB41A5 /* CarsRequestResource.swift */; };
+		DA25D6242753E1E200FB41A5 /* CachePolicyPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */; };
 		DAC13F2A2753ABA000CAB941 /* CarDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC13F292753AB9F00CAB941 /* CarDetailHeaderView.swift */; };
 		DAC13F2C2753ABCE00CAB941 /* CarDetailBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC13F2B2753ABCE00CAB941 /* CarDetailBodyView.swift */; };
 		DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */; };
@@ -56,6 +59,9 @@
 		6B0DEE8A8B74D43F8F54BBC6 /* Pods_CarsOnMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsOnMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7340109A51C746EB851738EC /* Pods_CarsOnMap_CarsOnMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsOnMap_CarsOnMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4CABB7EE94444784AC0770 /* Pods-CarsOnMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsOnMap.release.xcconfig"; path = "Target Support Files/Pods-CarsOnMap/Pods-CarsOnMap.release.xcconfig"; sourceTree = "<group>"; };
+		DA25D61E2753CF8000FB41A5 /* RequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResource.swift; sourceTree = "<group>"; };
+		DA25D6202753D1ED00FB41A5 /* CarsRequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsRequestResource.swift; sourceTree = "<group>"; };
+		DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePolicyPlugin.swift; sourceTree = "<group>"; };
 		DAC13F292753AB9F00CAB941 /* CarDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailHeaderView.swift; sourceTree = "<group>"; };
 		DAC13F2B2753ABCE00CAB941 /* CarDetailBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailBodyView.swift; sourceTree = "<group>"; };
 		DAD0AA95275266E300EA872E /* CarsOnMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsOnMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +137,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DA25D61D2753CF6D00FB41A5 /* RequestResources */ = {
+			isa = PBXGroup;
+			children = (
+				DA25D61E2753CF8000FB41A5 /* RequestResource.swift */,
+				DA25D6202753D1ED00FB41A5 /* CarsRequestResource.swift */,
+			);
+			path = RequestResources;
+			sourceTree = "<group>";
+		};
+		DA25D6222753E18C00FB41A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DAC13F2D2753B11700CAB941 /* CarDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +189,8 @@
 		DAD0AA97275266E300EA872E /* CarsOnMap */ = {
 			isa = PBXGroup;
 			children = (
+				DA25D6222753E18C00FB41A5 /* Extensions */,
+				DA25D61D2753CF6D00FB41A5 /* RequestResources */,
 				DAD0AADD2752891800EA872E /* Models */,
 				DAD0AAD62752836600EA872E /* ViewModels */,
 				DAD0AAD5275282F700EA872E /* Views */,
@@ -498,6 +523,8 @@
 				DAD0AAE62752C03B00EA872E /* MapView.swift in Sources */,
 				DAD0AAEC2752DF3100EA872E /* MainView.swift in Sources */,
 				DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */,
+				DA25D6212753D1ED00FB41A5 /* CarsRequestResource.swift in Sources */,
+				DA25D6242753E1E200FB41A5 /* CachePolicyPlugin.swift in Sources */,
 				DAD0AAEA2752CD0B00EA872E /* PinView.swift in Sources */,
 				DAC13F2A2753ABA000CAB941 /* CarDetailHeaderView.swift in Sources */,
 				DAD0AAD0275270BB00EA872E /* CodingTaskAPITarget.swift in Sources */,
@@ -505,6 +532,7 @@
 				DAD0AAD42752759000EA872E /* AppDelegate.swift in Sources */,
 				DAD0AAF42752E19500EA872E /* CarDetailView.swift in Sources */,
 				DAD0AADF2752892D00EA872E /* Car.swift in Sources */,
+				DA25D61F2753CF8000FB41A5 /* RequestResource.swift in Sources */,
 				DAD0AADC2752858200EA872E /* MapViewModel.swift in Sources */,
 				DAD0AAF02752DFBF00EA872E /* CarListView.swift in Sources */,
 			);
@@ -729,7 +757,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VSQTNZ7WAN;
+				DEVELOPMENT_TEAM = GHT955K56B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -755,7 +783,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VSQTNZ7WAN;
+				DEVELOPMENT_TEAM = GHT955K56B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -780,7 +808,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VSQTNZ7WAN;
+				DEVELOPMENT_TEAM = GHT955K56B;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -804,7 +832,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VSQTNZ7WAN;
+				DEVELOPMENT_TEAM = GHT955K56B;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
