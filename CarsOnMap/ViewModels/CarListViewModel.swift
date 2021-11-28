@@ -11,28 +11,23 @@ import MapKit
 import ObjectMapper
 
 class CarListViewModel: ObservableObject {
-    @Published var cars: [CarListItemViewModel] = []
+    private let requestResource = CarsRequestResource.default
+    @Published private(set) var cars: [CarListItemViewModel] = []
+    @Published private(set) var apiCallError: APICallError?
+    @Published var isFailed: Bool = false
     
     func getCarList(){
-        let provider = MoyaProvider<CodingTaskAPITarget>()
-        provider.request(.listCars) { result in
-            switch result {
-            case let .success(response):
-                do {
-                    let carsJSON = try response.mapJSON()
-                    guard let cars = Mapper<Car>().mapArray(JSONObject: carsJSON) else{ return }
-                    self.cars = cars.map({CarListItemViewModel.init(car: $0)})
-                }
-                catch{
-                    print("err")
-                }
-            case let .failure(error):
-                print(error.localizedDescription)
-                break
+        isFailed = false
+        self.requestResource.getCarsList { [unowned self] result in
+            switch result{
+            case .success(let cars):
+                self.cars = cars.map({CarListItemViewModel.init(car: $0)})
+                isFailed = false
+            case .failure(let error):
+                self.apiCallError = error
+                isFailed = true
             }
-            
         }
-        
     }
 }
 
