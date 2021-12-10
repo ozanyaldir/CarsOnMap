@@ -9,9 +9,13 @@ import Foundation
 import Moya
 import ObjectMapper
 
-class CarsRequestResource: RequestResource {
+protocol CarsRequestResourceProtocol{
+    func getCarsList(_ completion: @escaping(Result<[Car], APICallError>) -> Void)
+}
+
+class CarsRequestResource: RequestResource, CarsRequestResourceProtocol {
     
-    open func getCarsList(_ completion: @escaping(Result<[Car], APICallError>) -> Void){
+    func getCarsList(_ completion: @escaping(Result<[Car], APICallError>) -> Void){
         makeBasicRequest(target: .listCars) { result in
             switch result{
             case .success(let jsonObject):
