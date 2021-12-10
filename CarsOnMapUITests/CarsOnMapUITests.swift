@@ -6,24 +6,27 @@
 //
 
 import XCTest
-import Moya
 
 class when_main_view_is_shown: XCTestCase {
-
-    func test_should_run(){
-        let app = XCUIApplication()
+    var app: XCUIApplication!
+    var requestResource: MockCarRequestResource!
+    
+    override func setUp() {
+        app = XCUIApplication()
+        requestResource = MockCarRequestResource()
         continueAfterFailure = false
         app.launch()
-        
-        //let requestResource = CarsRequestResource.init(provider: MoyaProvider<CodingTaskAPITarget>(stubClosure: MoyaProvider.immediatelyStub))
-        //requestResource.getCarsList { [unowned self] result in
-        //    switch result{
-        //    case .success(let cars):
-        //        print(cars)
-        //    case .failure(let error):
-        //        print(error)
-        //    }
-        //}
-        
+    }
+
+    func test_should_run(){
+        requestResource.getCarsList { result in
+            switch result{
+            case .success(let cars):
+                print(cars)
+                XCTAssertNotNil(cars)
+            case .failure(_):
+                XCTFail()
+            }
+        }
     }
 }

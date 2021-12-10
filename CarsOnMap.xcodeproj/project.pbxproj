@@ -12,8 +12,6 @@
 		C2579799CFCC38A542026BCE /* Pods_CarsOnMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0DEE8A8B74D43F8F54BBC6 /* Pods_CarsOnMapTests.framework */; };
 		DA1B2B222753FC9600DC930B /* Array+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */; };
 		DA1B2B232753FD1C00DC930B /* Array+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */; };
-		DA1B2B2727543C6B00DC930B /* list_cars.json in Resources */ = {isa = PBXBuildFile; fileRef = DA1B2B2627543C6B00DC930B /* list_cars.json */; };
-		DA1B2B2927543C8B00DC930B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B2B2827543C8B00DC930B /* Constants.swift */; };
 		DA1B2B2B27543FA800DC930B /* CodingTaskAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AACF275270BB00EA872E /* CodingTaskAPITarget.swift */; };
 		DA1B2B2C27543FA900DC930B /* CodingTaskAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AACF275270BB00EA872E /* CodingTaskAPITarget.swift */; };
 		DA1B2B2D27543FB000DC930B /* RequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D61E2753CF8000FB41A5 /* RequestResource.swift */; };
@@ -24,14 +22,15 @@
 		DA1B2B3227543FBC00DC930B /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AADE2752892D00EA872E /* Car.swift */; };
 		DA1B2B3327543FC600DC930B /* CachePolicyPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */; };
 		DA1B2B3427543FC700DC930B /* CachePolicyPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */; };
-		DA1B2B3527543FD100DC930B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B2B2827543C8B00DC930B /* Constants.swift */; };
-		DA1B2B3627543FD100DC930B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B2B2827543C8B00DC930B /* Constants.swift */; };
-		DA1B2B37275440AB00DC930B /* list_cars.json in Resources */ = {isa = PBXBuildFile; fileRef = DA1B2B2627543C6B00DC930B /* list_cars.json */; };
-		DA1B2B38275440AB00DC930B /* list_cars.json in Resources */ = {isa = PBXBuildFile; fileRef = DA1B2B2627543C6B00DC930B /* list_cars.json */; };
 		DA1B2B39275440EC00DC930B /* Array+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */; };
 		DA25D61F2753CF8000FB41A5 /* RequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D61E2753CF8000FB41A5 /* RequestResource.swift */; };
 		DA25D6212753D1ED00FB41A5 /* CarsRequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D6202753D1ED00FB41A5 /* CarsRequestResource.swift */; };
 		DA25D6242753E1E200FB41A5 /* CachePolicyPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */; };
+		DA854C07275D87FE007AD56B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA854C06275D87FE007AD56B /* GoogleService-Info.plist */; };
+		DA854C0A275D89B6007AD56B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DA854C09275D89B6007AD56B /* FirebaseAnalytics */; };
+		DA854C0C275D89B6007AD56B /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = DA854C0B275D89B6007AD56B /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		DA854C0E275D89B6007AD56B /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = DA854C0D275D89B6007AD56B /* FirebaseAppCheck */; };
+		DA854C10275D89B6007AD56B /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = DA854C0F275D89B6007AD56B /* FirebaseCrashlytics */; };
 		DAC13F2A2753ABA000CAB941 /* CarDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC13F292753AB9F00CAB941 /* CarDetailHeaderView.swift */; };
 		DAC13F2C2753ABCE00CAB941 /* CarDetailBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC13F2B2753ABCE00CAB941 /* CarDetailBodyView.swift */; };
 		DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */; };
@@ -50,6 +49,7 @@
 		DAD0AAF02752DFBF00EA872E /* CarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAEF2752DFBF00EA872E /* CarListView.swift */; };
 		DAD0AAF22752DFF000EA872E /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAF12752DFF000EA872E /* CarListViewModel.swift */; };
 		DAD0AAF42752E19500EA872E /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAF32752E19500EA872E /* CarDetailView.swift */; };
+		DAE62AFD2762D76F005C9358 /* MockCarRequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE62AFC2762D76F005C9358 /* MockCarRequestResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,11 +79,10 @@
 		7340109A51C746EB851738EC /* Pods_CarsOnMap_CarsOnMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsOnMap_CarsOnMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4CABB7EE94444784AC0770 /* Pods-CarsOnMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsOnMap.release.xcconfig"; path = "Target Support Files/Pods-CarsOnMap/Pods-CarsOnMap.release.xcconfig"; sourceTree = "<group>"; };
 		DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
-		DA1B2B2627543C6B00DC930B /* list_cars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list_cars.json; sourceTree = "<group>"; };
-		DA1B2B2827543C8B00DC930B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DA25D61E2753CF8000FB41A5 /* RequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResource.swift; sourceTree = "<group>"; };
 		DA25D6202753D1ED00FB41A5 /* CarsRequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsRequestResource.swift; sourceTree = "<group>"; };
 		DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePolicyPlugin.swift; sourceTree = "<group>"; };
+		DA854C06275D87FE007AD56B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DAC13F292753AB9F00CAB941 /* CarDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailHeaderView.swift; sourceTree = "<group>"; };
 		DAC13F2B2753ABCE00CAB941 /* CarDetailBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailBodyView.swift; sourceTree = "<group>"; };
 		DAD0AA95275266E300EA872E /* CarsOnMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsOnMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +104,7 @@
 		DAD0AAEF2752DFBF00EA872E /* CarListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListView.swift; sourceTree = "<group>"; };
 		DAD0AAF12752DFF000EA872E /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
 		DAD0AAF32752E19500EA872E /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
+		DAE62AFC2762D76F005C9358 /* MockCarRequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCarRequestResource.swift; sourceTree = "<group>"; };
 		DD929640818DBCF3394AFD55 /* Pods-CarsOnMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsOnMapTests.debug.xcconfig"; path = "Target Support Files/Pods-CarsOnMapTests/Pods-CarsOnMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +113,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA854C0E275D89B6007AD56B /* FirebaseAppCheck in Frameworks */,
+				DA854C0A275D89B6007AD56B /* FirebaseAnalytics in Frameworks */,
+				DA854C10275D89B6007AD56B /* FirebaseCrashlytics in Frameworks */,
+				DA854C0C275D89B6007AD56B /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				796C9DD578F5B3FFFCFEBBBE /* Pods_CarsOnMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +177,6 @@
 			children = (
 				DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */,
 				DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */,
-				DA1B2B2827543C8B00DC930B /* Constants.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,7 +226,7 @@
 				DAD0AA98275266E300EA872E /* CarsOnMapApp.swift */,
 				DAD0AAD32752759000EA872E /* AppDelegate.swift */,
 				DAD0AAE72752CB2D00EA872E /* Assets.xcassets */,
-				DA1B2B2627543C6B00DC930B /* list_cars.json */,
+				DA854C06275D87FE007AD56B /* GoogleService-Info.plist */,
 			);
 			path = CarsOnMap;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 		DAD0AAB2275266EB00EA872E /* CarsOnMapUITests */ = {
 			isa = PBXGroup;
 			children = (
+				DAE62AFB2762D75C005C9358 /* Mock */,
 				DAD0AAB3275266EB00EA872E /* CarsOnMapUITests.swift */,
 				DAD0AAB5275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift */,
 			);
@@ -306,6 +310,14 @@
 			path = CarList;
 			sourceTree = "<group>";
 		};
+		DAE62AFB2762D75C005C9358 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				DAE62AFC2762D76F005C9358 /* MockCarRequestResource.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,12 +330,19 @@
 				DAD0AA92275266E200EA872E /* Frameworks */,
 				DAD0AA93275266E200EA872E /* Resources */,
 				D35DC6FF33378AF06780B3CF /* [CP] Embed Pods Frameworks */,
+				DA854C11275D8B3E007AD56B /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CarsOnMap;
+			packageProductDependencies = (
+				DA854C09275D89B6007AD56B /* FirebaseAnalytics */,
+				DA854C0B275D89B6007AD56B /* FirebaseAnalyticsWithoutAdIdSupport */,
+				DA854C0D275D89B6007AD56B /* FirebaseAppCheck */,
+				DA854C0F275D89B6007AD56B /* FirebaseCrashlytics */,
+			);
 			productName = CarsOnMap;
 			productReference = DAD0AA95275266E300EA872E /* CarsOnMap.app */;
 			productType = "com.apple.product-type.application";
@@ -399,6 +418,9 @@
 				Base,
 			);
 			mainGroup = DAD0AA8C275266E200EA872E;
+			packageReferences = (
+				DA854C08275D89B6007AD56B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = DAD0AA96275266E300EA872E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -415,7 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA1B2B2727543C6B00DC930B /* list_cars.json in Resources */,
+				DA854C07275D87FE007AD56B /* GoogleService-Info.plist in Resources */,
 				DAD0AAE82752CB2D00EA872E /* Assets.xcassets in Resources */,
 				DAD0AAA0275266EA00EA872E /* Preview Assets.xcassets in Resources */,
 			);
@@ -425,7 +447,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA1B2B37275440AB00DC930B /* list_cars.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +454,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA1B2B38275440AB00DC930B /* list_cars.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +515,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarsOnMap/Pods-CarsOnMap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DA854C11275D8B3E007AD56B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
 		DC3252DF68EBCDF5332C62B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -564,7 +603,6 @@
 				DA25D61F2753CF8000FB41A5 /* RequestResource.swift in Sources */,
 				DAD0AADC2752858200EA872E /* MapViewModel.swift in Sources */,
 				DAD0AAF02752DFBF00EA872E /* CarListView.swift in Sources */,
-				DA1B2B2927543C8B00DC930B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,7 +617,6 @@
 				DA1B2B2B27543FA800DC930B /* CodingTaskAPITarget.swift in Sources */,
 				DA1B2B232753FD1C00DC930B /* Array+CLLocationCoordinate2D.swift in Sources */,
 				DA1B2B2F27543FB400DC930B /* CarsRequestResource.swift in Sources */,
-				DA1B2B3527543FD100DC930B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,13 +626,13 @@
 			files = (
 				DAD0AAB4275266EB00EA872E /* CarsOnMapUITests.swift in Sources */,
 				DA1B2B2E27543FB100DC930B /* RequestResource.swift in Sources */,
+				DAE62AFD2762D76F005C9358 /* MockCarRequestResource.swift in Sources */,
 				DA1B2B3227543FBC00DC930B /* Car.swift in Sources */,
 				DA1B2B3427543FC700DC930B /* CachePolicyPlugin.swift in Sources */,
 				DA1B2B2C27543FA900DC930B /* CodingTaskAPITarget.swift in Sources */,
 				DAD0AAB6275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift in Sources */,
 				DA1B2B3027543FB400DC930B /* CarsRequestResource.swift in Sources */,
 				DA1B2B39275440EC00DC930B /* Array+CLLocationCoordinate2D.swift in Sources */,
-				DA1B2B3627543FD100DC930B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +777,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"CarsOnMap/Preview Content\"";
 				DEVELOPMENT_TEAM = GHT955K56B;
 				ENABLE_PREVIEWS = YES;
@@ -933,6 +971,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA854C08275D89B6007AD56B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA854C09275D89B6007AD56B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA854C08275D89B6007AD56B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		DA854C0B275D89B6007AD56B /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA854C08275D89B6007AD56B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		DA854C0D275D89B6007AD56B /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA854C08275D89B6007AD56B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		DA854C0F275D89B6007AD56B /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA854C08275D89B6007AD56B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAD0AA8D275266E200EA872E /* Project object */;
 }
