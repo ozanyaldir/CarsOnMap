@@ -10,23 +10,23 @@ import XCTest
 class when_main_view_is_shown: XCTestCase {
     var app: XCUIApplication!
     var requestResource: MockCarRequestResource!
+    var pageObject: CarListPageObject!
     
     override func setUp() {
         app = XCUIApplication()
+        pageObject = CarListPageObject(app: app)
         requestResource = MockCarRequestResource()
         continueAfterFailure = false
+        app.launchEnvironment = ["ENV": "TEST"]
         app.launch()
+        
+        pageObject.tabBar.buttons["List"].tap()
+        
     }
-
+    
     func test_should_run(){
-        requestResource.getCarsList { result in
-            switch result{
-            case .success(let cars):
-                print(cars)
-                XCTAssertNotNil(cars)
-            case .failure(_):
-                XCTFail()
-            }
-        }
+        
+        app.tables.cells.element(boundBy: 0).tap()
+        
     }
 }

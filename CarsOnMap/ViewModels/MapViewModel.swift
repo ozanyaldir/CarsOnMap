@@ -10,7 +10,7 @@ import MapKit
 import Moya
 
 class MapViewModel: ObservableObject {
-    private let requestResource = CarsRequestResource.init(provider: MoyaProvider<CodingTaskAPITarget>(plugins: [CachePolicyPlugin()]))
+    private let requestResource: CarsRequestResourceProtocol = RequestResourceFactory.createCarRequestResource()
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 0, longitude: 0),
         span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)

@@ -17,13 +17,13 @@ enum APICallError: Error{
 
 class RequestResource {
     
-    let provider: MoyaProvider<CodingTaskAPITarget>
+    let provider: MoyaProvider<CarsOnMapAPITarget>
     
-    init(provider: MoyaProvider<CodingTaskAPITarget>){
+    init(provider: MoyaProvider<CarsOnMapAPITarget>){
         self.provider = provider
     }
     
-    open func makeBasicRequest(target: CodingTaskAPITarget, _ completion: @escaping(Result<Any, APICallError>) -> Void){
+    open func makeBasicRequest(target: CarsOnMapAPITarget, _ completion: @escaping(Result<Any, APICallError>) -> Void){
         provider.request(target) { result in
             switch result {
             case let .success(response):

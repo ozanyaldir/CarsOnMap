@@ -8,11 +8,11 @@
 import Foundation
 import Moya
 
-enum CodingTaskAPITarget {
+enum CarsOnMapAPITarget {
     case listCars
 }
 
-extension CodingTaskAPITarget: TargetType {
+extension CarsOnMapAPITarget: TargetType {
     
     var parameters: [String : Any]? {
         [:]
@@ -63,7 +63,7 @@ extension CodingTaskAPITarget: TargetType {
     
 }
 
-extension CodingTaskAPITarget: CachePolicyGettable {
+extension CarsOnMapAPITarget: CachePolicyGettable {
     var cachePolicy: URLRequest.CachePolicy {
         switch self {
         case .listCars:
