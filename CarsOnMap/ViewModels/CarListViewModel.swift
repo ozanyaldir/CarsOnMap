@@ -10,7 +10,7 @@ import MapKit
 import Moya
 
 class CarListViewModel: ObservableObject {
-    private let requestResource: CarsRequestResourceProtocol = CarsRequestResource(provider: MoyaProvider<CodingTaskAPITarget>(plugins: [CachePolicyPlugin()]))
+    private let requestResource: CarsRequestResourceProtocol = RequestResourceFactory.createCarRequestResource()
     @Published private(set) var cars: [CarListItemViewModel] = []
     @Published private(set) var apiCallError: APICallError?
     @Published var isFailed: Bool = false
