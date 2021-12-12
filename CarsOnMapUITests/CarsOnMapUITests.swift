@@ -7,26 +7,24 @@
 
 import XCTest
 
-class when_main_view_is_shown: XCTestCase {
+class when_car_list_view_is_shown: XCTestCase {
     var app: XCUIApplication!
     var requestResource: MockCarRequestResource!
-    var pageObject: CarListPageObject!
+    var carListPageObject: CarListPageObject!
     
     override func setUp() {
         app = XCUIApplication()
-        pageObject = CarListPageObject(app: app)
+        carListPageObject = CarListPageObject(app: app)
         requestResource = MockCarRequestResource()
         continueAfterFailure = false
         app.launchEnvironment = ["ENV": "TEST"]
         app.launch()
         
-        pageObject.tabBar.buttons["List"].tap()
-        
+        carListPageObject.tabBar.buttons["List"].tap()
+        let _ = app.waitForExistence(timeout: 500)
     }
     
-    func test_should_run(){
-        
+    func test_should_be_able_to_view_car_details(){
         app.tables.cells.element(boundBy: 0).tap()
-        
     }
 }

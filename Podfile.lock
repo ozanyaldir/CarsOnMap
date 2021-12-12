@@ -6,13 +6,11 @@ PODS:
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
   - netfox (1.19.0)
-  - ObjectMapper (4.2.0)
 
 DEPENDENCIES:
   - Kingfisher (~> 7.1)
   - Moya (~> 15.0)
   - netfox (~> 1.19)
-  - ObjectMapper (~> 4.2)
 
 SPEC REPOS:
   trunk:
@@ -20,15 +18,13 @@ SPEC REPOS:
     - Kingfisher
     - Moya
     - netfox
-    - ObjectMapper
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   netfox: efeec1d23406df6cd605212f09a40957bb5654eb
-  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
 
-PODFILE CHECKSUM: 6f5f8831177a4f76e31d367694d679cd82437efd
+PODFILE CHECKSUM: aa3685d10144519eeac56ebcaacba713b3ac4bb6
 
 COCOAPODS: 1.11.2

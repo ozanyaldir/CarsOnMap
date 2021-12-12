@@ -19,8 +19,7 @@ extension CarsOnMapAPITarget: TargetType {
     }
     
     var baseURL: URL {
-        let url = "https://cdn.sixt.io/codingtask/"
-        return URL.init(string: url)!
+        return Constants.baseURL
     }
     
     var path: String {

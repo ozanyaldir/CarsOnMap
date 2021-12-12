@@ -16,7 +16,7 @@ class MapViewModel: ObservableObject {
         span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)
     )
     @Published private(set) var annotations: [AnnotationViewModel] = []
-    @Published private(set) var apiCallError: APICallError?
+    private(set) var apiCallError: APICallError?
     @Published var isFailed: Bool = false
     
     func getCarList(){
@@ -24,7 +24,7 @@ class MapViewModel: ObservableObject {
         requestResource.getCarsList { [unowned self] result in
             switch result{
             case .success(let cars):
-                let annotationVMArray = cars.map({AnnotationViewModel.init(car: $0)})
+                let annotationVMArray = cars.map(AnnotationViewModel.init)
                 let coordinatesArray = annotationVMArray.map({$0.coordinate})
                 DispatchQueue.main.async {
                     self.annotations = annotationVMArray
@@ -47,18 +47,22 @@ class MapViewModel: ObservableObject {
 
 struct AnnotationViewModel: Identifiable{
     
-    let id: String
-    let name: String?
-    let modelName: String
-    let carImageUrl: String?
-    let coordinate: CLLocationCoordinate2D
+    let car: Car
     
-    init(car: Car){
-        self.id = car.id ?? UUID().uuidString
-        self.modelName = car.modelName ?? "Undefined"
-        self.name = car.name ?? "Undefined"
-        self.carImageUrl = car.carImageUrl
-        self.coordinate = CLLocationCoordinate2D(latitude: car.latitude!, longitude: car.longitude!)
+    var id: String{
+        car.id
+    }
+    var name: String{
+        car.name ?? "Undefined"
+    }
+    var modelName: String{
+        car.modelName ?? "Undefined"
+    }
+    var carImageUrl: String?{
+        car.carImageUrl
+    }
+    var coordinate: CLLocationCoordinate2D{
+        car.coordinate
     }
 }
 
