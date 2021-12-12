@@ -8,13 +8,7 @@
 import Foundation
 import XCTest
 
-class CarDetailPageObject{
-    
-    var app: XCUIApplication
-    
-    init(app: XCUIApplication){
-        self.app = app
-    }
+class CarDetailPageObject: MainViewPageObject{
     
     var carNameText: XCUIElement{
         app.staticTexts["carNameText"]
