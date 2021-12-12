@@ -14,5 +14,4 @@ struct Constants{
         static let responseMappingFailure = "Response Mapping Failed"
         static let unknownError = "Unknown error occured"
     }
-    
 }

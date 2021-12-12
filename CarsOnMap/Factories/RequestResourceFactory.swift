@@ -10,12 +10,12 @@ import Moya
 
 class RequestResourceFactory{
     
-    static func createCarRequestResource(provider: MoyaProvider<CarsOnMapAPITarget> = MoyaProviderFactory.create()) -> CarsRequestResourceProtocol{
-        let requestResource = CarsRequestResource.init(provider: provider)
-        let environment = ProcessInfo.processInfo.environment["ENV"]
-        if let environment = environment, environment == "TEST"{
-            return MockCarRequestResource.init(requestResource: requestResource)
+    static func createCarRequestResource(provider: MoyaProvider<CarsOnMapAPITarget> = .init(plugins: [CachePolicyPlugin()])) -> CarsRequestResourceProtocol{
+        switch Globals.isTest{
+        case true:
+            return MockCarRequestResource()
+        case false:
+            return CarsRequestResource.init(provider: provider)
         }
-        return requestResource
     }
 }
