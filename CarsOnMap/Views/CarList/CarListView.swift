@@ -18,6 +18,7 @@ struct CarListView: View {
                 List(carListVM.cars, id: \.id){ car in
                     CarListItem(car: car)
                 }
+                .accessibilityIdentifier("carList")
             }
             .onAppear {
                 carListVM.getCarList()

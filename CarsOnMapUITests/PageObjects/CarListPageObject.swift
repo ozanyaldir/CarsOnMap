@@ -8,20 +8,10 @@
 import Foundation
 import XCTest
 
-class CarListPageObject{
+class CarListPageObject: MainViewPageObject{
     
-    var app: XCUIApplication
-    
-    init(app: XCUIApplication){
-        self.app = app
-    }
-    
-    var tabBar: XCUIElement{
-        app.tabBars["Tab Bar"]
-    }
-    
-    var carNameText: XCUIElement{
-        app.staticTexts["carNameText"]
+    var carList: XCUIElement{
+        app.tables["carList"]
     }
     
 }

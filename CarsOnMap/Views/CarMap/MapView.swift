@@ -17,6 +17,7 @@ struct MapView: View {
                 PinView(title: annotationVM.modelName, imageURL: annotationVM.carImageUrl)
             }
         }
+        .accessibilityIdentifier("carMap")
         .edgesIgnoringSafeArea(.top)
         .onAppear {
             mapVM.getCarList()

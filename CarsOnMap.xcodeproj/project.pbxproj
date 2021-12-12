@@ -28,6 +28,8 @@
 		DA1AFEFA276654820095D0E1 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AFEF5276649180095D0E1 /* Car.swift */; };
 		DA1AFEFB276654860095D0E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AFEF727664D2D0095D0E1 /* Constants.swift */; };
 		DA1AFEFC276654860095D0E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AFEF727664D2D0095D0E1 /* Constants.swift */; };
+		DA1AFEFE276680270095D0E1 /* CarMapPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AFEFD276680270095D0E1 /* CarMapPageObject.swift */; };
+		DA1AFF002766824C0095D0E1 /* MainViewPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AFEFF2766824C0095D0E1 /* MainViewPageObject.swift */; };
 		DA1B2B222753FC9600DC930B /* Array+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */; };
 		DA1B2B232753FD1C00DC930B /* Array+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */; };
 		DA1B2B2B27543FA800DC930B /* CarsOnMapAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AACF275270BB00EA872E /* CarsOnMapAPITarget.swift */; };
@@ -42,7 +44,6 @@
 		DA25D61F2753CF8000FB41A5 /* RequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D61E2753CF8000FB41A5 /* RequestResource.swift */; };
 		DA25D6212753D1ED00FB41A5 /* CarsRequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D6202753D1ED00FB41A5 /* CarsRequestResource.swift */; };
 		DA25D6242753E1E200FB41A5 /* CachePolicyPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25D6232753E1E200FB41A5 /* CachePolicyPlugin.swift */; };
-		DA503AC927653DB300DA2E92 /* CarDetailPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA503AC827653DB300DA2E92 /* CarDetailPageObject.swift */; };
 		DA503ACA27653DB400DA2E92 /* CarDetailPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA503AC827653DB300DA2E92 /* CarDetailPageObject.swift */; };
 		DA854C07275D87FE007AD56B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA854C06275D87FE007AD56B /* GoogleService-Info.plist */; };
 		DA854C0A275D89B6007AD56B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DA854C09275D89B6007AD56B /* FirebaseAnalytics */; };
@@ -67,7 +68,6 @@
 		DAD0AAF22752DFF000EA872E /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAF12752DFF000EA872E /* CarListViewModel.swift */; };
 		DAD0AAF42752E19500EA872E /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0AAF32752E19500EA872E /* CarDetailView.swift */; };
 		DAE62AFD2762D76F005C9358 /* MockCarRequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE62AFC2762D76F005C9358 /* MockCarRequestResource.swift */; };
-		DAE62B0A2762E262005C9358 /* CarListPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE62B092762E262005C9358 /* CarListPageObject.swift */; };
 		DAE62B0C2762E262005C9358 /* CarListPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE62B092762E262005C9358 /* CarListPageObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +103,8 @@
 		DA16E97D2763706500AE3AA8 /* RequestResourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResourceFactory.swift; sourceTree = "<group>"; };
 		DA1AFEF5276649180095D0E1 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		DA1AFEF727664D2D0095D0E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DA1AFEFD276680270095D0E1 /* CarMapPageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMapPageObject.swift; sourceTree = "<group>"; };
+		DA1AFEFF2766824C0095D0E1 /* MainViewPageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPageObject.swift; sourceTree = "<group>"; };
 		DA1B2B212753FC9600DC930B /* Array+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
 		DA25D61E2753CF8000FB41A5 /* RequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResource.swift; sourceTree = "<group>"; };
 		DA25D6202753D1ED00FB41A5 /* CarsRequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsRequestResource.swift; sourceTree = "<group>"; };
@@ -377,8 +379,10 @@
 		DAE62B082762E230005C9358 /* PageObjects */ = {
 			isa = PBXGroup;
 			children = (
+				DA1AFEFF2766824C0095D0E1 /* MainViewPageObject.swift */,
 				DAE62B092762E262005C9358 /* CarListPageObject.swift */,
 				DA503AC827653DB300DA2E92 /* CarDetailPageObject.swift */,
+				DA1AFEFD276680270095D0E1 /* CarMapPageObject.swift */,
 			);
 			path = PageObjects;
 			sourceTree = "<group>";
@@ -658,13 +662,11 @@
 				DAD0AAE62752C03B00EA872E /* MapView.swift in Sources */,
 				DAD0AAEC2752DF3100EA872E /* MainView.swift in Sources */,
 				DAD0AA99275266E300EA872E /* CarsOnMapApp.swift in Sources */,
-				DA503AC927653DB300DA2E92 /* CarDetailPageObject.swift in Sources */,
 				DA0AB9F42765632F009BA4A9 /* CarDTO.swift in Sources */,
 				DA25D6212753D1ED00FB41A5 /* CarsRequestResource.swift in Sources */,
 				DA25D6242753E1E200FB41A5 /* CachePolicyPlugin.swift in Sources */,
 				DAD0AAEA2752CD0B00EA872E /* PinView.swift in Sources */,
 				DA1B2B222753FC9600DC930B /* Array+CLLocationCoordinate2D.swift in Sources */,
-				DAE62B0A2762E262005C9358 /* CarListPageObject.swift in Sources */,
 				DAC13F2A2753ABA000CAB941 /* CarDetailHeaderView.swift in Sources */,
 				DAD0AAD0275270BB00EA872E /* CarsOnMapAPITarget.swift in Sources */,
 				DAC13F2C2753ABCE00CAB941 /* CarDetailBodyView.swift in Sources */,
@@ -711,6 +713,8 @@
 				DAE62AFD2762D76F005C9358 /* MockCarRequestResource.swift in Sources */,
 				DA16E97C27636D4400AE3AA8 /* MoyaProviderFactory.swift in Sources */,
 				DA1B2B3427543FC700DC930B /* CachePolicyPlugin.swift in Sources */,
+				DA1AFF002766824C0095D0E1 /* MainViewPageObject.swift in Sources */,
+				DA1AFEFE276680270095D0E1 /* CarMapPageObject.swift in Sources */,
 				DA1B2B2C27543FA900DC930B /* CarsOnMapAPITarget.swift in Sources */,
 				DA16E9802763706500AE3AA8 /* RequestResourceFactory.swift in Sources */,
 				DAD0AAB6275266EB00EA872E /* CarsOnMapUITestsLaunchTests.swift in Sources */,
