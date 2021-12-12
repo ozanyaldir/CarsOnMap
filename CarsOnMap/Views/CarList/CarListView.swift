@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct CarListView: View {
     
@@ -17,24 +16,7 @@ struct CarListView: View {
         NavigationView {
             VStack{
                 List(carListVM.cars, id: \.id){ car in
-                    VStack{
-                        NavigationLink(
-                            destination: CarDetailView(car: car)
-                        ) {
-                            HStack{
-                                KFImage(URL(string: car.carImageUrl ?? ""))
-                                    .placeholder {
-                                        Image(uiImage: UIImage(named: "simple-car")!)
-                                            .resizable()
-                                            .frame(width: 50, height: 20)
-                                    }
-                                    .resizable()
-                                    .frame(width: 50, height: 30)
-                                Text("\(car.name ?? "Undefined")").fontWeight(.medium)
-                                Text("(\(car.modelName))").fontWeight(.light)
-                            }
-                        }
-                    }
+                    CarListItem(car: car)
                 }
             }
             .onAppear {

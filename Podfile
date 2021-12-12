@@ -6,7 +6,6 @@ target 'CarsOnMap' do
   use_frameworks!
   
   pod 'Moya', '~> 15.0'
-  pod 'ObjectMapper', '~> 4.2'
   pod 'Kingfisher', '~> 7.1'
   
   #Debug tools

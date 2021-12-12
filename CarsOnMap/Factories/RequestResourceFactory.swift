@@ -6,12 +6,12 @@
 //
 
 import Foundation
-
+import Moya
 
 class RequestResourceFactory{
     
-    static func createCarRequestResource() -> CarsRequestResourceProtocol{
-        let requestResource = CarsRequestResource.init(provider: MoyaProviderFactory.create())
+    static func createCarRequestResource(provider: MoyaProvider<CarsOnMapAPITarget> = MoyaProviderFactory.create()) -> CarsRequestResourceProtocol{
+        let requestResource = CarsRequestResource.init(provider: provider)
         let environment = ProcessInfo.processInfo.environment["ENV"]
         if let environment = environment, environment == "TEST"{
             return MockCarRequestResource.init(requestResource: requestResource)

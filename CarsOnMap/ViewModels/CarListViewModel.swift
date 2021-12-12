@@ -12,7 +12,7 @@ import Moya
 class CarListViewModel: ObservableObject {
     private let requestResource: CarsRequestResourceProtocol = RequestResourceFactory.createCarRequestResource()
     @Published private(set) var cars: [CarListItemViewModel] = []
-    @Published private(set) var apiCallError: APICallError?
+    private(set) var apiCallError: APICallError?
     @Published var isFailed: Bool = false
     
     func getCarList(){
@@ -21,7 +21,7 @@ class CarListViewModel: ObservableObject {
             switch result{
             case .success(let cars):
                 DispatchQueue.main.async {
-                    self.cars = cars.map({CarListItemViewModel.init(car: $0)})
+                    self.cars = cars.map(CarListItemViewModel.init)
                     isFailed = false
                 }
             case .failure(let error):
@@ -36,41 +36,52 @@ class CarListViewModel: ObservableObject {
 
 struct CarListItemViewModel: Identifiable{
     
-    let id: String
-    let name: String?
-    let modelName: String
-    let carImageUrl: String?
-    let coordinate: CLLocationCoordinate2D
+    let car: Car
     
-    let color: String?
-    let fuelLevel: Double?
-    let fuelType: String?
-    let group: String?
-    let innerCleanliness: String?
-    let licensePlate: String?
-    let make: String?
-    let modelIdentifier: String?
-    let series: String?
-    let transmission: String?
-    
-    init(car: Car){
-        self.id = car.id ?? UUID().uuidString
-        self.modelName = car.modelName ?? "Undefined"
-        self.name = car.name ?? "Undefined"
-        self.carImageUrl = car.carImageUrl
-        self.coordinate = CLLocationCoordinate2D(latitude: car.latitude!, longitude: car.longitude!)
-        
-        self.color = car.color
-        self.fuelLevel = car.fuelLevel
-        self.fuelType = car.fuelType
-        self.group = car.group
-        self.innerCleanliness = car.innerCleanliness
-        self.licensePlate = car.licensePlate
-        self.make = car.make
-        self.modelIdentifier = car.modelIdentifier
-        self.series = car.series
-        self.transmission = car.transmission
-        
+    var id: String{
+        car.id
+    }
+    var name: String{
+        car.name ?? "Undefined"
+    }
+    var modelName: String{
+        car.modelName ?? "Undefined"
+    }
+    var carImageUrl: String?{
+        car.carImageUrl
+    }
+    var coordinate: CLLocationCoordinate2D{
+        car.coordinate
+    }
+    var color: String?{
+        car.color
+    }
+    var fuelLevel: Double?{
+        car.fuelLevel
+    }
+    var fuelType: String?{
+        car.fuelType
+    }
+    var group: String?{
+        car.group
+    }
+    var innerCleanliness: String?{
+        car.innerCleanliness
+    }
+    var licensePlate: String?{
+        car.licensePlate
+    }
+    var make: String?{
+        car.make
+    }
+    var modelIdentifier: String?{
+        car.modelIdentifier
+    }
+    var series: String?{
+        car.series
+    }
+    var transmission: String?{
+        car.transmission
     }
 }
 
