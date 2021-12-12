@@ -32,13 +32,13 @@ struct CarDetailHeaderView: View {
                     HStack{
                         Text("Name:").fontWeight(.medium)
                         Text("\(car.name)").fontWeight(.light)
-                            .accessibilityIdentifier("carNameText")
+                            .accessibilityIdentifier("nameText")
                         Spacer()
                     }
                     HStack{
                         Text("Model Name:").fontWeight(.medium)
                         Text("\(car.modelName)").fontWeight(.light)
-                            .accessibilityIdentifier("carModelNameText")
+                            .accessibilityIdentifier("modelNameText")
                         Spacer()
                     }
                 }

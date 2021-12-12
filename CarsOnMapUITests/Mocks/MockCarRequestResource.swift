@@ -6,16 +6,15 @@
 //
 
 import Foundation
+@testable import Moya
 
 class MockCarRequestResource: CarsRequestResourceProtocol{
     
     let requestResource: CarsRequestResource
     
-    init(requestResource: CarsRequestResource){
-        self.requestResource = requestResource
-    }
     init(){
-        let requestResource = CarsRequestResource.init(provider: MoyaProviderFactory.create())
+        let provider = MoyaProvider<CarsOnMapAPITarget>(stubClosure: MoyaProvider.immediatelyStub)
+        let requestResource = CarsRequestResource.init(provider: provider)
         self.requestResource = requestResource
     }
     
